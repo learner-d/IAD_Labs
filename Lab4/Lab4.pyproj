@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1224768f-d760-4ed5-b50d-9982e489bd0f</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Lab4.py</StartupFile>
+    <StartupFile>main.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Lab4.py" />
     <Compile Include="main.py">
       <SubType>Code</SubType>
     </Compile>
