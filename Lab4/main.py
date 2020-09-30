@@ -9,17 +9,17 @@ def main():
 
     #Разбивка на кластеры
     #(метод к-средних)
-    #1 кластер 2 кластера ... 6 кластеров
-    Global.N_Clusters = 7
-    #Global.N_Clusters = Input.Integer("Количество кластеров (1-10): ", min=1, max=10)
-    MyClustering.Clusterize(InData.data, Global.N_Clusters)
+    Global.N_Clusters = Input.Integer("Количество кластеров (1-10): ", min=1, max=10)
+    Global.Clusters = MyClustering.Clusterize(InData.data, Global.N_Clusters)
     
     #Покластерный вывод
+    for i in range(Global.N_Clusters):
 
-    #Отображение графиков
-    plt.plot(InData.data[:,0], ".k")
-    plt.grid(True)
-    plt.show()
+
+    ##Отображение графиков
+    #plt.plot(InData.data[:,0], ".k")
+    #plt.grid(True)
+    #plt.show()
 
 if __name__ == "__main__":
     main()
