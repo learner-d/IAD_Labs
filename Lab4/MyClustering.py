@@ -2,7 +2,7 @@ import random
 import numpy
 import math
 
-class Cluster():
+class Cluster:
     def __init__(self, size, id):
         self.size = size
         self.objects = numpy.zeros(shape(size, 2))
@@ -18,6 +18,20 @@ class Cluster():
     #Сообщает центроид кластера
     def center(self):
         return (self.objects[:,0].mean(), self.objects[:,1].mean())
+
+class ClusterPool:
+    def __init__(self, n_clusters, cluster_size):
+        self.n_clusters = n_clusters
+        #Кластеры
+        self.clusters = []
+        #Кластеры, не заполненные полностью
+        self.avail_clusters = []
+
+        #Заполняем коллекции кластеров
+        for i in range(n_clusters):
+            cluster = Cluster(cluster_size)
+            self.clusters.append(clusters)
+            self.avail_clusters.append(cluster)
 
 #Разбивает на кластеры
 def Clusterize(in_data, n_clusters):
