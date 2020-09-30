@@ -1,4 +1,4 @@
-import InData, Global, Input
+import InData, Global, Input, Clustering
 
 def main():
     print("Метод К-средних\n")
@@ -9,7 +9,7 @@ def main():
     #Разбивка на кластеры
     #(метод к-средних)
     #1 кластер 2 кластера ... 6 кластеров
-    Global.N_Clusters = Input.Integer("Количество кластеров (1-10): ", min=1, max=10)
+    Clustering.N_Clusters = Input.Integer("Количество кластеров (1-10): ", min=1, max=10)
     
     #Покластерный вывод
 
