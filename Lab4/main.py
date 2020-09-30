@@ -1,4 +1,5 @@
 import InData, Global, Input
+import matplotlib.pyplot as plt
 
 def main():
     print("Метод К-средних\n")
@@ -14,6 +15,9 @@ def main():
     #Покластерный вывод
 
     #Отображение графиков
+    plt.plot(InData.data[:,0], ".k")
+    plt.grid(True)
+    plt.show()
 
 if __name__ == "__main__":
     main()
