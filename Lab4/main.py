@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 
 def main():
     print("Метод К-средних\n")
+    
     #Выводим исходные данные
     print("Исходные данные:")
     print(InData.data, end='\n\n')
@@ -14,7 +15,8 @@ def main():
     
     #Покластерный вывод
     for i in range(Global.N_Clusters):
-
+        print(f"Кластер {i+1}:")
+        print(Global.Clusters[i], end='\n\n')
 
     ##Отображение графиков
     #plt.plot(InData.data[:,0], ".k")
