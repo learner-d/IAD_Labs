@@ -21,7 +21,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Clustering.py">
+    <Compile Include="MyClustering.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Global.py">
