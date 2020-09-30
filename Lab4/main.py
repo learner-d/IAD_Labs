@@ -1,4 +1,4 @@
-import InData, Global, Input
+import InData, Global, Input, MyClustering
 import matplotlib.pyplot as plt
 
 def main():
