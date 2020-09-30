@@ -11,5 +11,5 @@ def Clusterize(in_data, n_clusters):
                 rand_ind = random.randrange(0, len(in_data))
     
     #Центроиды
-    
+    centers = random_centers()
     #Кластеры

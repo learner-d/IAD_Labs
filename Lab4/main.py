@@ -10,7 +10,8 @@ def main():
     #Разбивка на кластеры
     #(метод к-средних)
     #1 кластер 2 кластера ... 6 кластеров
-    Global.N_Clusters = Input.Integer("Количество кластеров (1-10): ", min=1, max=10)
+    Global.N_Clusters = 7
+    #Global.N_Clusters = Input.Integer("Количество кластеров (1-10): ", min=1, max=10)
     MyClustering.Clusterize(InData.data, Global.N_Clusters)
     
     #Покластерный вывод
