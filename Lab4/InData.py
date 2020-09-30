@@ -15,5 +15,3 @@ raw_data = numpy.array((
 
 #Исходные обработанные перемешанные данные
 data = preprocessing.Normalizer().transform(raw_data)
-numpy.random.shuffle(data)
-pass
