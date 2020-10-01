@@ -137,5 +137,5 @@ def Clusterize(in_data, n_clusters):
         centers = new_centers
 
     #Возвращаем разбитые на кластеры данные
-    return Cl_Pool.get_clustered_data()
+    return Cl_Pool.get_clustered_data(), new_centers
     
