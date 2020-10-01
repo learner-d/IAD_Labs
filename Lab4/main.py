@@ -18,10 +18,13 @@ def main():
         print(f"Кластер {i+1}:")
         print(Global.Clusters[i], end='\n\n')
 
-    ##Отображение графиков
-    #plt.plot(InData.data[:,0], ".k")
-    #plt.grid(True)
-    #plt.show()
+    #Отображение графиков
+    for i in range(Global.N_Clusters):
+        plt.plot(Global.Clusters[i][:,0], Global.Clusters[i][:,1], c=Global.Cluster_Colors[i], ls='', marker='o', label=f"Кластер {i+1}")
+
+    plt.legend()
+    plt.grid(True)
+    plt.show()
 
 if __name__ == "__main__":
     main()

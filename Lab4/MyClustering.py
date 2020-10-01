@@ -114,16 +114,23 @@ def Clusterize(in_data, n_clusters):
     
     #Создаем пул кластеров
     Cl_Pool = ClusterPool(n_clusters, cluster_size, centers)
-
-    #Проводим рассчет
-    while True:
+    
+    iters = 0
+    max_iters = 300
+    for i in range(max_iters):
         #Распределяем объекты по кластерам
         Cl_Pool.assign(in_data)
         #Перерасчитываем центроиды
         new_centers = Cl_Pool.get_centers()
+
         #Проверяем смещение центроидов
         if diff(centers, new_centers) < 0.00001:
             break
+
+        iters = iters + 1
+        if iters == max_iters:
+            break
+
         #Удаляем объекты с кластеров
         Cl_Pool.clear()
         #Меняем центроиды

@@ -13,5 +13,5 @@ raw_data = numpy.array((
     (101.75, 29.58), (90.27, 37.23), (77.775, 27.54), (83.64, 31.62), (97.665, 30.09)
 ))
 
-#Исходные обработанные перемешанные данные
-data = preprocessing.Normalizer().transform(raw_data)
+#Исходные обработанные данные
+data = preprocessing.MinMaxScaler().fit_transform(raw_data)
