@@ -27,7 +27,10 @@
     <Compile Include="main.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MathCounting.py">
+    <Compile Include="LeastSquares.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Neural.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
