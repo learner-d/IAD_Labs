@@ -33,10 +33,23 @@ def main():
     print(f"m = {m2}, c = {c2}")
     print(f"E = {E2}")
 
-    #График отклонений апроксимации
+    #Кривая отклонений апроксимации
     fig, ax = plt.subplots(1)
+    ax.set_title("Ошибки в процессе обучения")
+    ax.set_xlabel("Эпоха")
+    ax.set_ylabel("Отклонение (E)")
     ax.plot(E_vec)
+
+    #Поверхность отклонений апроксимации
+    #fig = plt.figure()
+    #ax = fig.add_subplot(111, projection='3d')
+    #ax.set_title("Ошибки в процессе обучения")
+    #ax.set_xlabel("Коэффициент m")
+    #ax.set_ylabel("Коэффициент c")
+    #ax.set_zlabel("Отклонение (E)")
+    #ax.scatter(m_vec, c_vec, E_vec)
     
+    #Отображение результатов обучения
     fig, axs = plt.subplots(1, 2)
     axs[0].set_title("Метод наименьших квадратов")
     axs[0].plot(X, Y, 'o')

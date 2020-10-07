@@ -3,8 +3,8 @@ import math
 import random
 from Constants import N, X, Y
 
-N_Epochs = 300
-TrainRate = 0.009
+N_Epochs = 200
+TrainRate = 0.0025
 
 #возвращает максимальное по модулю E
 #возвращает x в точке максимального отколонения
