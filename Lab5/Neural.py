@@ -3,7 +3,7 @@ import math
 import random
 from Constants import N, X, Y
 
-N_Epochs = 200
+N_Epochs = 300
 TrainRate = 0.0025
 
 #возвращает максимальное по модулю E
@@ -31,19 +31,22 @@ def correct(m, c, E):
         return m2, c2, E2
 
 #Возвращает векторы m, c, E
-def train():
-    m_vec = numpy.zeros(N_Epochs)
-    c_vec = numpy.zeros(N_Epochs)
-    E_vec = numpy.zeros(N_Epochs)
+def train(E_min):
+    m_vec = []
+    c_vec = []
+    E_vec = []
     
     m = random.uniform(0, 0.5)
-    c = random.uniform(0, 0.5)
+    c = random.uniform(0.5, 1)
     E = error(m, c)
 
     for i in range(N_Epochs):
         m, c, E = correct(m, c, E)
-        m_vec[i] = m
-        c_vec[i] = c
-        E_vec[i] = E
+        m_vec.append(m)
+        c_vec.append(c)
+        E_vec.append(E)
+        
+        if math.fabs(E) < E_min:
+            break
 
-    return m_vec, c_vec, E_vec
+    return numpy.array(m_vec), numpy.array(c_vec), numpy.array(E_vec)
